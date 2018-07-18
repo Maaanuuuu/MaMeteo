@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:widget="http://www.netvibes.com/ns/">
+
+<head>
+
+	<!-- widget title : Météo -->
+	<title>M&#233;t&#233;o</title>
+
+	<!-- Widget metas -->
+	<meta name="Emmanuel Himbert" content="APR" />
+	<meta name="description" content="Météo Widget" />   
+
+	<!-- Application Standalone emulation files-->
+    <link rel="stylesheet" type="text/css" href="https://uwa.netvibes.com/lib/c/UWA/assets/css/standalone.css" />
+    <script type="text/javascript" src="https://uwa.netvibes.com/lib/c/UWA/js/UWA_Standalone_Alone.js"></script>
+
+	<!-- Application Preferences -->
+    <widget:preferences>
+	</widget:preferences>
+	
+	<!-- widget meteo -->
+
+	<script type="text/javascript">
+
+		var myWidget = {
+			
+			onLoad: function() {
+				var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
+				my.src = "https://services.my-meteo.com/widget/js_design?ville=251&format=petit-horizontal&nb_jours=3&ombre1=000000&c1=ffffff&c2=a9a9a9&c3=ffffff&c4=ffffff&c5=ffffff&police=0&t_icones=2&fond=1&masque=3&x=476&y=80&d=0&id=7dceebf7d2db9a4cc2f6423190366cbc";
+				var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
+				
+				widget.myWidget = z;
+										
+			}
+		};
+					
+		widget.addEvent('onLoad', myWidget.onLoad);
+				
+	</script>
+	<!-- widget meteo -->
+
+</head>
+
+<body>
+	<div id="widget_7dceebf7d2db9a4cc2f6423190366cbc">
+	<span id="l_7dceebf7d2db9a4cc2f6423190366cbc"><a href="http://www.mymeteo.info/r/paris_Bc"></a></span>
+	</div>
+</body>
+
+</html>
